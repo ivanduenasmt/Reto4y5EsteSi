@@ -48,21 +48,16 @@ public class OrderRepository {
         return orderCrudRepository.findBySalesManIdAndStatus(id, status);
     }
 
-    /*public List<Order> getOrderByRegisterDayAndSalesManId(Date registerDay, Integer id){
+    public List<Order> getOrderByRegisterDayAndSalesManId(Date registerDay, Integer id){
         return orderCrudRepository.findByRegisterDayAndSalesManId(registerDay, id);
-    }*/
+    }
 
-    public List<Order> getByRegisterDayAndSalesManId(String registerDay, Integer id){
+    /*public List<Order> getByRegisterDayAndSalesManId(String registerDay, Integer id){
         try {
             return orderCrudRepository.findByRegisterDayAndSalesManId(new SimpleDateFormat("yyyy-MM-dd").parse(registerDay), id);
         } catch (ParseException e) {
             e.printStackTrace();
             return null;
-        }
-    }
-
-
-
-
+        }*/
 
 }
