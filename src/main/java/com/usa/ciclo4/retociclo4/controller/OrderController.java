@@ -5,6 +5,7 @@ import com.usa.ciclo4.retociclo4.model.Product;
 import com.usa.ciclo4.retociclo4.model.User;
 import com.usa.ciclo4.retociclo4.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -64,7 +65,7 @@ public class OrderController {
     }
 
     @GetMapping("/date/{registerDay}/{id}")
-    public List<Order> RegisterDayAndSalesManIdExist(@PathVariable("id") int id, @PathVariable("registerDay") Date registerDay){
+    public List<Order> RegisterDayAndSalesManIdExist(@PathVariable("id") int id, @PathVariable("registerDay") @DateTimeFormat(pattern="yyyy-MM-dd") Date registerDay){
         return orderService.getOrderByRegisterDayAndSalesManId(registerDay, id);
     }
 
