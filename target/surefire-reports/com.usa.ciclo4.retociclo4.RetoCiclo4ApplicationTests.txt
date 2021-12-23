@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: com.usa.ciclo4.retociclo4.RetoCiclo4ApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 51.543 s <<< FAILURE! - in com.usa.ciclo4.retociclo4.RetoCiclo4ApplicationTests
+contextLoads  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: java.lang.IllegalStateException: Failed to execute CommandLineRunner
+Caused by: org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting for a server that matches com.mongodb.client.internal.MongoClientDelegate$1@4ebd6fd6. Client view of cluster state is {type=REPLICA_SET, srvResolutionException=com.mongodb.MongoConfigurationException: The SRV host name 'cluster0.voeal.mongodb.net'resolved to a host 'cluster0-shard-00-00 'that is not in a sub-domain of the SRV host., servers=[]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches com.mongodb.client.internal.MongoClientDelegate$1@4ebd6fd6. Client view of cluster state is {type=REPLICA_SET, srvResolutionException=com.mongodb.MongoConfigurationException: The SRV host name 'cluster0.voeal.mongodb.net'resolved to a host 'cluster0-shard-00-00 'that is not in a sub-domain of the SRV host., servers=[]
+Caused by: com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting for a server that matches com.mongodb.client.internal.MongoClientDelegate$1@4ebd6fd6. Client view of cluster state is {type=REPLICA_SET, srvResolutionException=com.mongodb.MongoConfigurationException: The SRV host name 'cluster0.voeal.mongodb.net'resolved to a host 'cluster0-shard-00-00 'that is not in a sub-domain of the SRV host., servers=[]
+
